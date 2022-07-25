@@ -10,16 +10,16 @@ actor {
     a + b;
   };
   
-  public func square (a : Nat, b : Nat) : async Nat {
-    a * b;
+  public func square (n : Nat) : async Nat {
+    n * n;
   };
 
   public func days_to_second (day : Int) : async Int {
     day * 86400;
   };
 
-  public func increment_counter () : async Int {
-    counter += 1;
+  public func increment_counter (n : Nat) : async Int {
+    counter += n;
     return counter;
   };
 
