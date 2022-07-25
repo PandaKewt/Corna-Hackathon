@@ -6,8 +6,8 @@ actor {
   var counter : Int = 0;
   var removeValue = 0;
 
-  public func add (a : Nat, b : Nat) : async Nat {
-    a + b;
+  public func add (m : Nat, n : Nat) : async Nat {
+    m + n;
   };
   
   public func square (n : Nat) : async Nat {
