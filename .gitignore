@@ -1,18 +1,18 @@
 # Various IDEs and Editors
-.vscode/
-.idea/
-**/*~
+*/.vscode/
+*/.idea/
+*/**/*~
 
 # Mac OSX temporary files
-.DS_Store
-**/.DS_Store
+*/.DS_Store
+*/**/.DS_Store
 
 # dfx temporary files
-.dfx/
+*/.dfx/
 
 # generated files
-src/declarations/
+*/src/declarations/
 
 # frontend code
-node_modules/
-dist/
+*/node_modules/
+*/dist/
