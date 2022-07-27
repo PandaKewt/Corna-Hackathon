@@ -1,1 +1,0 @@
-# FPT_Hackathon_2022_Corna
