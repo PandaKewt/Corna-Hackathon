@@ -52,18 +52,24 @@ actor {
     Array.filter(arr, func(val : Nat) : Bool {n != val});
   };
 
-  public func selection_sort(arr : [Nat]) : async [Nat] {
+  func swap(&)
 
+  public func selection_sort(arr : [Nat]) : async [Nat] {
     let newArr : [var Nat] = Array.thaw<Nat>(arr);
-    for (min in Iter.range(0, newArr.size()-2)){
-      for (selection in Iter.range(min, newArr.size()-1)){
-        if(newArr[min] > newArr[selection]){
-          var tmp : Nat = newArr[min];
-          newArr[min] := newArr[selection];
-          newArr[selection] := tmp;
+
+    for(i in Iter.range(0, newArr.size())) { //size == len()
+      var min~ = i;
+      for(j in Iter.range(i+1, newArr.size()-1)) {
+        if (arr[min] > arr[j]) {
+          min := j;
         };
       };
+      let temp : Nat = newArr[i];
+      newArr[i] := newArr[min];
+      newArr[min] := temp;
+      Debug.print(debug_show(newArr));
     };
+    
     return Array.freeze<Nat>(newArr);
   }
   
